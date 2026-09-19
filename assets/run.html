@@ -1,0 +1,24 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:ui-monospace,Consolas,"Microsoft YaHei",monospace;background:#e8e8e8;width:720px;height:560px;display:flex;align-items:center;justify-content:center;}
+.term{width:620px;background:#1e1e1e;border-radius:14px;overflow:hidden;box-shadow:0 18px 38px rgba(0,0,0,.3);}
+.bar{height:36px;background:#2d2d2d;display:flex;align-items:center;padding:0 12px;gap:6px;}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block;}
+.title{margin-left:10px;color:#bbb;font-size:13px;}
+.body{padding:20px 22px;color:#9fe8c0;font-size:15px;line-height:1.7;}
+.body .p{margin-bottom:8px;}
+.ok{color:#7fd4a8;}
+.arrow{color:#e0e0e0;}
+</style></head><body>
+<div class="term">
+  <div class="bar"><span class="dot" style="background:#ff5f56"></span><span class="dot" style="background:#ffbd2e"></span><span class="dot" style="background:#27c93f"></span><span class="title">wechat_bridge.py</span></div>
+  <div class="body">
+    <div class="p"><span class="arrow">$</span> python wechat_bridge.py login</div>
+    <div class="p ok">✓ 微信连接成功，账号已保存</div>
+    <div class="p"><span class="arrow">$</span> python wechat_bridge.py run</div>
+    <div class="p ok">wechat bridge running...</div>
+    <div class="p"><span class="arrow">[recv]</span> 你好</div>
+    <div class="p ok">[sent] 回复成功</div>
+  </div>
+</div>
+</body></html>

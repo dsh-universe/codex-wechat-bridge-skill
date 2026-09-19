@@ -1,30 +1,39 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#e8e8e8;width:720px;height:560px;display:flex;align-items:center;justify-content:center;}
-.phone{width:330px;background:#ededed;border-radius:32px;border:7px solid #222;overflow:hidden;box-shadow:0 18px 38px rgba(0,0,0,.28);}
-.status{height:28px;background:#2e9a4c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;}
-.nav{height:44px;background:#2e9a4c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;}
-.chat-body{height:470px;background:#ededed;padding:14px 12px;display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.45;}
-.day{align-self:center;font-size:12px;color:#999;}
-.bubble{max-width:78%;padding:10px 12px;border-radius:6px;position:relative;}
-.bubble.user{align-self:flex-end;background:#95ec69;}
-.bubble.bot{align-self:flex-start;background:#fff;}
-.bubble.bot::before,.bubble.user::before{content:'';position:absolute;top:0;width:0;height:0;border:6px solid transparent;}
-.bubble.bot::before{left:-6px;border-right-color:#fff;border-left:0;}
-.bubble.user::before{right:-6px;border-left-color:#95ec69;border-right:0;}
-.typing{align-self:flex-start;color:#999;font-size:12px;margin-top:-4px;}
-.input{margin-top:auto;background:#f7f7f7;border-top:1px solid #ddd;height:42px;display:flex;align-items:center;padding:0 12px;color:#aaa;font-size:14px;}
+.phone{width:340px;background:#ededed;border-radius:32px;border:7px solid #111;overflow:hidden;box-shadow:0 18px 38px rgba(0,0,0,.3);}
+.status{height:26px;background:#2e9a4c;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:12px;font-weight:600;}
+.icons{display:flex;align-items:center;gap:5px;font-size:13px;}
+.nav{height:44px;background:#2e9a4c;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 12px;font-size:16px;}
+.nav .back{font-size:24px;line-height:1;}
+.nav .more{font-size:20px;letter-spacing:2px;}
+.chat-body{height:462px;background:#ededed;padding:12px;display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.5;position:relative;}
+.day{align-self:center;font-size:12px;color:#999;background:rgba(0,0,0,0.03);padding:3px 10px;border-radius:6px;}
+.row{display:flex;gap:6px;align-items:flex-start;}
+.row.bot{justify-content:flex-start;}
+.row.user{justify-content:flex-end;}
+.avatar{width:38px;height:38px;border-radius:6px;flex:0 0 auto;display:grid;place-items:center;color:#fff;font-size:15px;font-weight:700;}
+.avatar.bot{background:#07C160;}
+.avatar.user{background:#576b95;}
+.col{max-width:76%;display:flex;flex-direction:column;gap:4px;}
+.bubble{padding:10px 12px;font-size:15px;line-height:1.5;position:relative;box-shadow:0 1px 1px rgba(0,0,0,.06);}
+.bubble.bot{background:#fff;border-radius:8px 8px 8px 2px;}
+.bubble.user{background:#95ec69;border-radius:8px 8px 2px 8px;}
+.typing{color:#999;font-size:12px;padding:0 4px;}
+.input{height:50px;background:#f7f7f7;border-top:1px solid #dcdcdc;display:flex;align-items:center;gap:8px;padding:0 10px;color:#555;font-size:15px;}
+.input .box{flex:1;height:32px;background:#fff;border-radius:5px;border:1px solid #d9d9d9;display:flex;align-items:center;padding:0 10px;color:#bbb;font-size:14px;}
+.input .ic{font-size:18px;}
 </style></head><body>
 <div class="phone">
-  <div class="status">微信</div>
-  <div class="nav">Codex 机器人</div>
+  <div class="status"><span>19:34</span><span class="icons">▮▮▮ ●</span></div>
+  <div class="nav"><span class="back">‹</span><span>Codex 机器人</span><span class="more">···</span></div>
   <div class="chat-body">
-    <div class="day">今天 19:00</div>
-    <div class="bubble bot">你好，我是 Codex，你的微信助手 😊</div>
-    <div class="bubble user">今天龙虎榜有什么票上榜？</div>
-    <div class="typing">对方正在输入…</div>
-    <div class="bubble bot">收到！我查一下当日龙虎榜数据。</div>
-    <div class="input">⌨ 发送</div>
+    <div class="day">昨天 19:00</div>
+    <div class="row bot"><div class="avatar bot">Co</div><div class="col"><div class="bubble bot">你好，我是 Codex，你的微信助手 😊</div></div></div>
+    <div class="row user"><div class="col"><div class="bubble user">今天龙虎榜有什么票上榜？</div></div><div class="avatar user">我</div></div>
+    <div class="typing" style="align-self:flex-start;">对方正在输入…</div>
+    <div class="row bot"><div class="avatar bot">Co</div><div class="col"><div class="bubble bot">收到！我查一下当日龙虎榜数据，稍等。</div></div></div>
+    <div class="input"><span class="ic">🎙</span><span class="box">输入消息</span><span class="ic">😊</span><span class="ic">＋</span></div>
   </div>
 </div>
 </body></html>

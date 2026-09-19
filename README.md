@@ -29,6 +29,14 @@ Install:
 pip install requests
 ```
 
+## 使用流程示意
+
+![Codex 微信桥接使用示意](assets/usage-mockup.png)
+
+1. **扫码登录**：运行 `login`，用微信「扫一扫」确认，保存 bot 凭据。
+2. **收发消息**：在微信里给 bot 发消息，Codex 直接调用 LLM 回复。
+3. **运行桥接**：`run` 常驻长轮询，自动回复。
+
 ## Quick start
 
 ```bash

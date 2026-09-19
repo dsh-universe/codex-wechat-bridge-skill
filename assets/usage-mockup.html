@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #eaf2f5;
+      padding: 40px;
+      width: 1280px;
+    }
+    h1 { font-size: 34px; margin-bottom: 6px; }
+    .sub { color: #9fb8c2; font-size: 16px; margin-bottom: 28px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 18px;
+      padding: 22px;
+      min-height: 380px;
+    }
+    .step { font-size: 14px; color: #7fd4a8; font-weight: 700; letter-spacing: 0.06em; }
+    .title { font-size: 20px; font-weight: 700; margin: 8px 0 14px; }
+    .qr {
+      width: 150px; height: 150px; margin: 10px auto 14px; display: grid;
+      place-items: center; background: #fff; border-radius: 12px; color: #111;
+      font-size: 26px; font-weight: 800; letter-spacing: 2px;
+    }
+    .btn {
+      display: block; width: fit-content; margin: 6px auto 0;
+      background: #34d399; color: #083; font-weight: 700; padding: 10px 18px;
+      border-radius: 10px; font-size: 15px;
+    }
+    .chat { display: flex; flex-direction: column; gap: 12px; }
+    .bubble { max-width: 88%; padding: 11px 14px; border-radius: 14px; font-size: 15px; line-height: 1.5; }
+    .bubble.user { align-self: flex-end; background: #2563eb; }
+    .bubble.bot { align-self: flex-start; background: rgba(255,255,255,0.12); }
+    .typing { align-self: flex-start; color: #9fb8c2; font-size: 13px; }
+    pre {
+      background: rgba(0,0,0,0.35); padding: 14px; border-radius: 10px;
+      font-size: 13.5px; line-height: 1.55; color: #9fe8c0; white-space: pre-wrap;
+    }
+    .foot { margin-top: 26px; color: #8aa5b0; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Codex → 微信机器人</h1>
+  <div class="sub">三步把 Codex 接到你的个人微信</div>
+  <div class="grid">
+    <div class="card">
+      <div class="step">STEP 1</div>
+      <div class="title">扫码登录</div>
+      <div class="qr">QR</div>
+      <div style="text-align:center;font-size:14px;color:#cfe0e6;">用微信「扫一扫」</div>
+      <span class="btn">确认登录</span>
+    </div>
+    <div class="card">
+      <div class="step">STEP 2</div>
+      <div class="title">收发消息</div>
+      <div class="chat">
+        <div class="bubble user">今天龙虎榜有什么票上榜？</div>
+        <div class="typing">Codex 正在输入…</div>
+        <div class="bubble bot">收到！我帮你查一下当日龙虎榜数据。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="step">STEP 3</div>
+      <div class="title">运行桥接</div>
+      <pre>$ python wechat_bridge.py login
+$ python wechat_bridge.py run
+wechat bridge running...</pre>
+    </div>
+  </div>
+  <div class="foot">示意图 · 供理解使用流程，非真实聊天记录</div>
+</body>
+</html>

@@ -31,7 +31,7 @@ pip install requests
 
 ## 使用流程
 
-<p align="center"><img src="assets/login.png" width="320"/><img src="assets/chat.png" width="320"/><img src="assets/run.png" width="320"/></p>
+<p align="center"><img src="assets/login.png" width="270"/><img src="assets/chat.png" width="270"/><img src="assets/run.png" width="270"/></p>
 
 1. **扫码登录**：运行 `login`，用微信「扫一扫」确认，保存 bot 凭据。
 2. **收发消息**：在微信里给 bot 发消息，Codex 直接调用 LLM 回复。

@@ -31,23 +31,13 @@ pip install requests
 
 ## 使用流程
 
-### 1. 扫码登录
-
-![扫码登录](assets/login.png)
-
-运行 `login`，用微信「扫一扫」确认，保存 bot 凭据。
-
-### 2. 收发消息
-
-![收发消息](assets/chat.png)
-
-在微信里给 bot 发消息，Codex 直接调用 LLM 回复。
-
-### 3. 运行桥接
-
-![运行桥接](assets/run.png)
-
-`run` 常驻长轮询，自动回复。
+<table>
+  <tr>
+    <td align="center"><img src="assets/login.png" width="230"/><br/>1. 扫码登录<br/>运行 `login`，用微信「扫一扫」确认，保存 bot 凭据。</td>
+    <td align="center"><img src="assets/chat.png" width="230"/><br/>2. 收发消息<br/>在微信里给 bot 发消息，Codex 直接调用 LLM 回复。</td>
+    <td align="center"><img src="assets/run.png" width="230"/><br/>3. 运行桥接<br/>`run` 常驻长轮询，自动回复。</td>
+  </tr>
+</table>
 
 ```text
 你(微信) ──> 微信 bot ──> wechat_bridge.py ──> LLM API ──> 回复回微信

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Codex WeChat Bridge"
+  short_description: "Connect Codex to a personal WeChat account via iLink Bot API (QR login, long-poll, direct LLM reply)."

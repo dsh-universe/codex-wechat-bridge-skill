@@ -1,0 +1,11 @@
+{
+  "account_id": "<YOUR_ILINK_BOT_ACCOUNT_ID>",
+  "token": "<YOUR_ILINK_BOT_TOKEN>",
+  "base_url": "https://ilinkai.weixin.qq.com",
+  "user_id": "",
+  "home_channel": "",
+  "llm_base_url": "<YOUR_LLM_RESPONSES_BASE_URL>",
+  "llm_model": "<YOUR_LLM_MODEL>",
+  "llm_token": "<YOUR_LLM_API_TOKEN>",
+  "instructions_file": ""
+}
